@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>JavaScript Dev Survey Form</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title" id="title">JavaScript Dev Survey Form</h1>
+      <p class="description" id="description">
+        Form designed to gather insights and preferences from JavaScript
+        developers.
+      </p>
+    </header>
+
+    <form class="survey-form" id="survey-form">
+      <!-- NAME -->
+      <div class="form-group form-group-name">
+        <label for="name" id="name-label">
+          Name
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter your name"
+          />
+        </label>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="form-group form-group-email">
+        <label for="email" id="email-label">
+          Email
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Enter your email"
+          />
+        </label>
+      </div>
+
+      <!-- AGE -->
+      <div class="form-group form-group-age">
+        <label for="number" id="number-label">
+          Age
+          <input
+            type="number"
+            id="number"
+            name="age"
+            min="5"
+            max="120"
+            placeholder="Enter your age"
+          />
+        </label>
+      </div>
+
+      <!-- SELECT -->
+      <div class="form-group form-group-select">
+        <label for="dropdown">
+          What topic is hard for you in JS?
+          <select name="topic" id="dropdown">
+            <option value="0">(Select an option)</option>
+            <option value="1">Promises & Async</option>
+            <option value="2">Closures</option>
+            <option value="3">Hoisting</option>
+            <option value="4">Currying</option>
+            <option value="5">Prototypal Inheritance</option>
+            <option value="6">Event Bubbling & Capturing</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- RADIOS -->
+      <div class="form-group form-group-radio">
+        <span>Your proficiency level in JavaScript?</span>
+        <div class="radio-group">
+          <label for="lvl-0">
+            <input type="radio" name="skill-lvl" value="junior" id="lvl-0" />
+            Beginner
+          </label>
+          <label for="lvl-1">
+            <input type="radio" name="skill-lvl" value="mid" id="lvl-1" />
+            > 1 Year Exp.
+          </label>
+          <label for="lvl-2">
+            <input type="radio" name="skill-lvl" value="senior" id="lvl-2" />
+            > 3 Year Exp.
+          </label>
+        </div>
+      </div>
+
+      <!-- CHECKBOXES -->
+      <div class="form-group form-group-checkbox">
+        <span>JavaScript Framework/Library you worked with?</span>
+        <div class="checkbox-group">
+          <div class="col">
+            <label
+              ><input type="checkbox" name="react" value="react" /> React</label
+            >
+            <label
+              ><input type="checkbox" name="next" value="next" /> Next</label
+            >
+            <label
+              ><input type="checkbox" name="remix" value="remix" /> Remix</label
+            >
+            <label
+              ><input type="checkbox" name="angular" value="angular" />
+              Angular</label
+            >
+            <label
+              ><input type="checkbox" name="vue" value="vue" /> VueJS</label
+            >
+          </div>
+          <div class="col">
+            <label
+              ><input type="checkbox" name="qwik" value="qwik" /> Qwik</label
+            >
+            <label
+              ><input type="checkbox" name="node" value="node" /> NodeJS</label
+            >
+            <label
+              ><input type="checkbox" name="express" value="express" />
+              ExpressJS</label
+            >
+            <label
+              ><input type="checkbox" name="nest" value="nest" /> NestJS</label
+            >
+            <label
+              ><input type="checkbox" name="million" value="million" />
+              MillionJS</label
+            >
+          </div>
+          <div class="col">
+            <label
+              ><input type="checkbox" name="astro" value="astro" /> Astro</label
+            >
+            <label
+              ><input type="checkbox" name="three" value="three" />
+              ThreeJS</label
+            >
+            <label
+              ><input type="checkbox" name="nuxt" value="nuxt" /> Nuxt</label
+            >
+            <label
+              ><input type="checkbox" name="gatsby" value="gatsby" />
+              Gatsby</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- TEXTAREA -->
+      <div class="form-group form-group-textarea">
+        <label for="pain-points">
+          Pain Points to share with community
+          <textarea
+            name="pain-points"
+            id="pain-points"
+            rows="3"
+            cols="30"
+            placeholder="Enter your comment here"
+          ></textarea>
+        </label>
+      </div>
+
+      <input type="submit" id="submit" value="Submit" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+/* WARNING: CSS IS TRASH HERE
+as I didn't practiced writing it for a long time */
+
+:root {
+  --clr-primary: #f0db4f;
+  --clr-text-primary: #323330;
+  --clr-border-grey: #c3c5bf;
+  --clr-background-light: #ffffff;
+
+  --ff-family: 'Lato', sans-serif;
+  --ff-w-normal: 400;
+  --ff-w-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  background-color: var(--clr-primary);
+  color: var(--clr-text-primary);
+  padding: 3.5rem 0;
+}
+
+/* HEADER STYLES */
+.header {
+  width: 70%;
+  max-width: 700px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(3rem, 3vw, 4.6rem);
+  font-weight: var(--ff-w-bold);
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.49;
+}
+
+/* FORM STYLING */
+.survey-form {
+  background-color: var(--clr-background-light);
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  padding: 4rem;
+}
+
+.form-group {
+  margin-bottom: 3rem;
+}
+
+.form-group > label,
+.form-group > span {
+  font-size: 1.8rem;
+  font-weight: var(--ff-w-bold);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.6rem;
+  color: var(--clr-text-primary);
+}
+
+.form-group-name input,
+.form-group-email input,
+.form-group-age input,
+.form-group-select select,
+.form-group-textarea textarea,
+.radio-group,
+.checkbox-group {
+  margin-top: 1.6rem;
+}
+
+.form-group-name input,
+.form-group-email input,
+.form-group-age input,
+.form-group-select select,
+.form-group-textarea textarea {
+  border: 1px solid var(--clr-border-grey);
+  background: none;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+/* RADIOS & CHECKBOXES */
+.form-group-radio input,
+.form-group-checkbox input {
+  width: unset;
+  accent-color: var(--clr-text-primary);
+  transform: scale(1.3);
+  margin-right: 0.6rem;
+  vertical-align: baseline;
+}
+
+.radio-group {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.checkbox-group {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.checkbox-group label {
+  display: block;
+  margin-bottom: 1.3rem;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type='submit'] {
+  cursor: pointer;
+  padding: 1.4rem;
+  font-size: inherit;
+  font-weight: var(--ff-w-bold);
+  background-color: var(--clr-primary);
+  color: var(--clr-text-primary);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
