@@ -281,3 +281,12 @@ body {
       var(--window-color3) 30%
     );
 }
+
+.sky {
+  background: radial-gradient(
+    #ffcf33 0%,
+    #ffcf33 20%,
+    #ffff66 21%,
+    #bbeeff 100%
+  );
+}
