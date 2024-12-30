@@ -1,0 +1,29 @@
+:root {
+  --clr-header-text: #fffff0;
+  --clr-fig-description: #c3c5bf; /* time fill and ::after is same */
+  --clr-hero-background: #2d2d2d;
+
+  --clr-timeline-box: #ffffff;
+  --clr-timeline-text: #1e1e1e;
+  --clr-timeline-year: #323330;
+  --clr-time-hightlight-stroke: #2d2d2d;
+
+  --clr-footer-accent: #ff4133;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
