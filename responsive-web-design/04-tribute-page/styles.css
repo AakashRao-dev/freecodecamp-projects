@@ -29,9 +29,10 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-img {
+#image {
+  display: block;
   max-width: 100%;
-  object-fit: cover;
+  height: auto;
   border-radius: 10px;
 }
 
@@ -96,6 +97,11 @@ img {
   margin: 2rem auto 0;
 }
 
+.image-description a:link,
+.image-description a:visited {
+  color: var(--clr-fig-description);
+}
+
 @media (max-width: 768px) {
   .hero-description {
     font-size: 1.6rem;
@@ -123,7 +129,7 @@ img {
 }
 
 /* TIMELINE STYLING */
-main {
+section {
   background-color: var(--clr-timeline-background);
   padding: 6rem 3rem;
 }
