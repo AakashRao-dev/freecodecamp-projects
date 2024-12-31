@@ -1,8 +1,9 @@
 :root {
+  --clr-header-background: #2d2d2d;
   --clr-header-text: #fffff0;
   --clr-fig-description: #c3c5bf; /* time fill and ::after is same */
-  --clr-hero-background: #2d2d2d;
 
+  --clr-timeline-background: #f5f6f7;
   --clr-timeline-box: #ffffff;
   --clr-timeline-text: #1e1e1e;
   --clr-timeline-year: #323330;
@@ -26,4 +27,87 @@ html {
 
 body {
   font-family: 'Raleway', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* HEADER STYLING */
+.header {
+  min-height: 100vh;
+  background-color: var(--clr-header-background);
+  color: var(--clr-header-text);
+  text-align: center;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+}
+
+.imagebox {
+  width: 80%;
+  padding: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.image-1 {
+  height: 100%;
+  width: 100%;
+  grid-row: span 2;
+}
+
+.image-2,
+.image-3 {
+  grid-column: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.image-description {
+  color: var(--clr-fig-description);
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-description {
+    font-size: 1.6rem;
+  }
+
+  .imagebox {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 2rem;
+  }
+
+  .image-1 {
+    grid-row: auto;
+  }
+
+  .image-2,
+  .image-3 {
+    grid-column: auto;
+  }
 }
