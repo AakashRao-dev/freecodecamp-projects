@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>CSS Technical Documentation Page</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>CSS Documentation</header>
+      <ul>
+        <li><a href="#Welcome" class="nav-link">Welcome</a></li>
+        <li><a href="#Box_Model" class="nav-link">Box Model</a></li>
+        <li>
+          <a href="#Cascade_and_Specificity" class="nav-link"
+            >Cascade and Specificity</a
+          >
+        </li>
+        <li><a href="#Inheritance" class="nav-link">Inheritance</a></li>
+        <li><a href="#Colors" class="nav-link">Colors</a></li>
+        <li><a href="#Flexbox_Layout" class="nav-link">Flexbox Layout</a></li>
+        <li><a href="#Grid_Layout" class="nav-link">Grid Layout</a></li>
+        <li>
+          <a href="#Responsive_Design" class="nav-link">Responsive Design</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <!-- Total 10 p including all sections -->
+      <!-- Min 5 code elements -->
+      <!-- Min 5 li elements -->
+      <section class="main-section" id="Welcome">
+        <header id="">Welcome Welcome! 🥳🎉</header>
+        <article>
+          <p>
+            Welcome to the comprehensive CSS documentation, your go-to guide for
+            mastering Cascading Style Sheets. Whether you're a beginner looking
+            to learn the fundamentals or an experienced developer seeking
+            advanced techniques, this resource covers everything you need to
+            know about styling web pages.
+          </p>
+          <p>
+            Dive into topics like layout design, animations, responsive web
+            design, and more. Our goal is to make learning CSS efficient and
+            enjoyable by providing clear explanations, practical examples, and
+            tips for best practices. Let’s transform your ideas into beautiful,
+            responsive designs!
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Box_Model">
+        <header>Box Model</header>
+        <article>
+          <p>
+            The CSS Box Model is the foundation of how elements are structured
+            and spaced on a webpage. It represents the space taken up by an
+            element, consisting of the following areas:
+          </p>
+          <ol>
+            <li>
+              Content: The innermost area, where text or other content is
+              displayed.
+            </li>
+            <li>Padding: The space between the content and the border.</li>
+            <li>Border: The edge surrounding the padding and content.</li>
+            <li>
+              Margin: The outermost space, separating the element from others.
+            </li>
+          </ol>
+          <img src="./img/box-model.png" alt="box model" />
+        </article>
+      </section>
+
+      <section class="main-section" id="Cascade_and_Specificity">
+        <header>Cascade and Specificity</header>
+        <article>
+          <p>
+            The CSS Cascade determines which styles are applied when multiple
+            rules target the same element. It resolves conflicts using priority
+            based on <strong>specificity</strong>, <strong>importance</strong>,
+            and <strong>source order</strong>.
+          </p>
+          <p>
+            Styles with higher specificity or marked with !important override
+            others. If rules have the same weight, the one defined later in the
+            code takes precedence.
+          </p>
+          <p>
+            Specificity is a hierarchy system in CSS that determines which rule
+            is applied when multiple rules target the same element. It assigns a
+            weight to selectors based on their type:
+          </p>
+          <ul>
+            <li>
+              Inline styles (style attribute) have the highest specificity.
+            </li>
+            <li>
+              IDs (#id) have more weight than classes (.class), attributes, or
+              pseudo-classes (:hover).
+            </li>
+            <li>
+              Elements (e.g., div, p) and pseudo-elements (::before) have the
+              lowest weight.
+            </li>
+          </ul>
+
+          <pre>
+<code>
+  /* Lowest specificity (element selector) */
+  p {
+    color: blue;
+  }
+
+  /* Higher specificity (class selector) */
+  .highlight {
+    color: green;
+  }
+
+  /* Even higher specificity (ID selector) */
+  #important {
+    color: red;
+  }
+
+  /* Highest specificity (inline style) */</code>
+          </pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="Inheritance">
+        <header>Inheritance</header>
+        <article>
+          <p>
+            In CSS, certain properties, like text-related styles (e.g., color,
+            font-family), are inherited by child elements from their parent.
+            Non-inherited properties, like margin or padding, need to be
+            explicitly defined for child elements.
+          </p>
+          <p>
+            You can force inheritance using the inherit keyword or override it
+            with custom values. Inheritance simplifies styling for nested
+            elements.
+          </p>
+          <pre>
+<code>
+  body {
+    color: blue; /* Inherited by child elements */
+    font-family: Arial, sans-serif;
+  }
+
+  h1 {
+    font-size: 2rem; /* Not inherited, defined explicitly */
+  }
+
+  p {
+    color: inherit; /* Forces inheritance */
+  }</code>
+          </pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="Colors">
+        <header>Colors</header>
+        <article>
+          <p>
+            Colors in CSS are used to style elements, set backgrounds, borders,
+            text, and more. CSS supports different types of color notations for
+            flexibility, allowing designers to choose based on their preferences
+            or requirements.
+          </p>
+          <h3>Types of Colors in CSS</h3>
+          <ol>
+            <li>
+              Named Colors: Predefined color names like red, blue, green, etc.
+              (e.g., color: red;).
+            </li>
+            <li>
+              Hexadecimal Colors: Represented as #RRGGBB or #RGB (e.g., #FF5733
+              for orange).
+            </li>
+            <li>
+              RGB and RGBA: Defined by Red, Green, Blue values, with optional
+              Alpha for transparency (e.g., rgb(255, 87, 51) or rgba(255, 87,
+              51, 0.5)).
+            </li>
+            <li>
+              HSL and HSLA: Defined by Hue, Saturation, and Lightness, with
+              optional Alpha (e.g., hsl(11, 100%, 60%) or hsla(11, 100%, 60%,
+              0.5)).
+            </li>
+          </ol>
+          <pre>
+<code>
+  .named-color {
+    color: red; /* Named color */
+  }
+
+  .hex-color {
+    color: #1E90FF; /* Hexadecimal color */
+  }
+
+  .rgb-color {
+    color: rgb(34, 139, 34); /* RGB color */
+  }
+
+  .rgba-color {
+    background-color: rgba(34, 139, 34, 0.5); /* RGBA with transparency */
+  }
+
+  .hsl-color {
+    color: hsl(240, 100%, 50%); /* HSL color */
+  }</code>
+          </pre>
+        </article>
+      </section>
+      <section class="main-section" id="Flexbox_Layout">
+        <header>Flexbox Layout</header>
+        <article>
+          <p>
+            Flexbox is a CSS layout model designed for creating flexible and
+            responsive one-dimensional layouts. It allows you to align and
+            distribute space among items within a container, either horizontally
+            (row) or vertically (column).
+          </p>
+          <img src="./img/flexbox.png" alt="flexbox" />
+          <p>
+            Key properties include display: flex, justify-content (for
+            horizontal alignment), align-items (for vertical alignment), and
+            flex-direction (to set row or column).
+          </p>
+          <p>
+            Flexbox simplifies tasks like centering content, creating
+            equal-width columns, or reordering elements. It works by defining a
+            flex container and its child flex items, which can grow, shrink, or
+            maintain their size based on available space.
+          </p>
+          <pre>
+            <code>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }</code>
+          </pre>
+        </article>
+      </section>
+      <section class="main-section" id="Grid_Layout">
+        <header>Grid Layout</header>
+        <article>
+          <p>
+            CSS Grid is a powerful two-dimensional layout system for creating
+            complex, grid-based designs. It allows you to define rows and
+            columns and place items precisely within the grid.
+          </p>
+          <img src="./img/grid.png" alt="grid" />
+          <p>
+            Key properties include <strong>display: grid</strong>,
+            <strong>grid-template-columns</strong>,
+            <strong>grid-template-rows</strong>, and <strong>gap</strong> (for
+            spacing between items). Grid enables responsive layouts without
+            relying on floats or positioning.
+          </p>
+          <p>
+            It works by defining a grid container and its child grid items,
+            which can span multiple rows or columns. Grid is ideal for building
+            modern, structured layouts like dashboards or magazine-style
+            designs.
+          </p>
+          <pre>
+            <code>
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }</code>
+          </pre>
+        </article>
+      </section>
+      <section class="main-section" id="Responsive_Design">
+        <header>Responsive Design</header>
+        <article>
+          <p>
+            Responsive Design is an approach to web development that ensures
+            websites adapt to different screen sizes and devices. It uses
+            flexible layouts, images, and CSS media queries to adjust the design
+            dynamically.
+          </p>
+          <p>
+            Media queries allow you to apply specific styles based on device
+            characteristics like width, height, or orientation. Key techniques
+            include using relative units (like percentages or em), flexible
+            grids, and responsive images.
+          </p>
+          <p>
+            The goal is to provide an optimal viewing experience across
+            desktops, tablets, and mobile devices. Responsive design is
+            essential for modern web development, improving usability and
+            accessibility.
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
