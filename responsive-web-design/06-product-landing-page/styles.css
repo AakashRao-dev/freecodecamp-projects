@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+:root {
+  --color-primary: #121212;
+  --color-secondary: #1c2541;
+  --color-cta: #ffc915;
+
+  --color-soft-white: #eaeaea;
+  --color-light-gray: #383838;
+  --color-dark-gray: #0f0f0f;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000000;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+  color: var(--color-soft-white);
+  position: relative;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+header {
+  position: sticky;
+  top: 20px;
+  z-index: 1;
+}
+
+nav {
+  width: 80%;
+  margin: 4rem auto 4rem;
+  padding: 2rem 4rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav .logo {
+  color: var(--color-soft-white);
+  text-decoration: none;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+nav ul {
+  margin-left: auto;
+  display: flex;
+  list-style-type: none;
+  gap: 8rem;
+}
+
+nav ul li a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--color-soft-white);
+  font-weight: 700;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: var(--color-cta);
+  text-underline-offset: 8px;
+}
+
+nav a svg {
+  transform: scale(1.5);
+}
+
+.hero {
+  min-height: 60vh;
+  margin-top: 0.2rem;
+  background: var(--color-primary) url(./img/hero.svg) center center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 0 4rem 8rem;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 700px;
+  aspect-ratio: 1;
+}
+
+.animate__animated.animate__backInUp {
+  --animate-duration: 1.4s;
+}
+
+.hero-image img,
+.features-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 4vw + 1rem, 12rem);
+  font-weight: 400;
+  color: var(--color-soft-white);
+}
+
+.hero-title span {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  margin-top: 4rem;
+}
+
+.hero-description span {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.btn {
+  padding: 1.5rem 6rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 300ms all;
+  transform-origin: left;
+}
+
+.btn-cta {
+  background-color: var(--color-cta);
+  color: var(--color-dark-gray);
+}
+
+.btn-cta:hover {
+  box-shadow: 0 8px 32px rgba(210, 210, 210, 0.3);
+}
+
+.features-title {
+  margin-block: 4rem;
+  text-align: center;
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #000000;
+  padding: 3rem 0;
+}
+
+.features-image {
+  width: 500px;
+  aspect-ratio: 1;
+}
+
+.features-grid-wrapper {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.features-grid {
+  margin-top: 5rem;
+  height: 900px;
+  display: grid;
+  padding: 1vw;
+  gap: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'card-1 card-1 card-3 card-3 card-3'
+    'card-1 card-1 card-4 card-4 card-4'
+    'card-1 card-1 card-4 card-4 card-4'
+    'card-2 card-2 card-5 card-5 card-6'
+    'card-2 card-2 card-7 card-7 card-7'
+    'card-2 card-2 card-7 card-7 card-7';
+}
+
+.card {
+  padding: 2rem;
+  font-size: 2.6rem;
+  border-radius: 2rem;
+  font-weight: 300;
+  line-height: 1.4;
+  background-color: rgba(31, 41, 55, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card-1 {
+  grid-area: card-1;
+}
+.card-2 {
+  grid-area: card-2;
+}
+.card-3 {
+  grid-area: card-3;
+}
+.card-4 {
+  grid-area: card-4;
+}
+.card-5 {
+  grid-area: card-5;
+}
+.card-6 {
+  grid-area: card-6;
+}
+.card-7 {
+  grid-area: card-7;
+}
+
+.card-1 .features-image,
+.card-2 .features-image {
+  width: 400px;
+  aspect-ratio: 1;
+}
+
+.card-3 .features-image {
+  width: 250px;
+}
+
+.card-5 img {
+  width: 120px;
+  aspect-ratio: 1;
+}
+
+.features-grid .card h3 {
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.pricing-section {
+  background-color: #000000;
+}
+
+.pricing-title {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 4rem;
+}
+
+.pricing-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 6rem auto 8rem;
+  display: grid;
+  gap: 6rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pricing-card {
+  background-color: rgba(31, 41, 55, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 1fr 90px;
+  gap: 2rem;
+}
+
+.pricing-tier {
+  font-size: 2.3rem;
+  margin-bottom: 1.4rem;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.pricing-card ul {
+  list-style-type: none;
+}
+
+.pricing-card ul li {
+  font-size: 1.9rem;
+  color: #d1d5db;
+  margin-bottom: 1.6rem;
+}
+
+.pricing-card ul li::before {
+  content: '✔';
+  color: #22c55e;
+  margin-right: 1rem;
+}
+
+.pricing-card-pro {
+  border-color: var(--color-cta);
+}
+
+.pricing-card-pro .btn-price {
+  background-color: var(--color-cta);
+  color: var(--color-primary);
+}
+
+.btn-price {
+  font-size: 2.1rem;
+  background-color: var(--color-secondary);
+  color: var(--color-soft-white);
+}
+
+.contact {
+  width: 90%;
+  margin: 8rem auto 4rem;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 4rem auto;
+  background-color: rgba(31, 41, 55, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 10px;
+  display: grid;
+  gap: 4rem;
+}
+
+.contact form label {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact form input,
+.contact form textarea {
+  background-color: var(--color-secondary);
+  color: var(--color-soft-white);
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  font-family: inherit;
+  font-size: 1.8rem;
+}
